@@ -169,7 +169,8 @@ func (q *Queue) loop(c *colly.Collector, requestc chan<- *colly.Request, complet
 			// Terminate when
 			//   1. No active requests
 			//   2. Empty queue
-			errc <- nil
+                        // QQMODIFY:modify here for queue not quit forever
+                        //errc <- nil
 			break
 		}
 		sent := requestc
